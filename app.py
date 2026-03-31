@@ -78,7 +78,7 @@ if uploaded_file is not None and "graph" not in st.session_state:
     st.session_state.graph = builder.compile()
 
     if "chat_history" not in st.session_state:
-    st.session_state.chat_history = []
+        st.session_state.chat_history = []
 
     question = st.text_input("Ask something:")
 
