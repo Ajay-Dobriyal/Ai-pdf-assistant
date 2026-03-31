@@ -67,7 +67,7 @@ if uploaded_file is not None and "graph" not in st.session_state:
     # NODE DEFINITIONS
     # =========================
     def retrieve_node(state):
-        docs = retriever.similarity_search(state["question"])
+        docs = vectorstore.similarity_search(state["question"])
         context = " ".join([doc.page_content for doc in docs])
         return {"context": context}
 
